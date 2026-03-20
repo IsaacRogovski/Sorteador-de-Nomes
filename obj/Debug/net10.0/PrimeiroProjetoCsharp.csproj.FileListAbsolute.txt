@@ -1,0 +1,14 @@
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/bin/Debug/net10.0/PrimeiroProjetoCsharp
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/bin/Debug/net10.0/PrimeiroProjetoCsharp.deps.json
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/bin/Debug/net10.0/PrimeiroProjetoCsharp.runtimeconfig.json
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/bin/Debug/net10.0/PrimeiroProjetoCsharp.dll
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/bin/Debug/net10.0/PrimeiroProjetoCsharp.pdb
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.AssemblyInfoInputs.cache
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.AssemblyInfo.cs
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.csproj.CoreCompileInputs.cache
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.dll
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/refint/PrimeiroProjetoCsharp.dll
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.pdb
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.genruntimeconfig.cache
+/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/ref/PrimeiroProjetoCsharp.dll
