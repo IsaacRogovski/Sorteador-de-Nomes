@@ -101,10 +101,28 @@ void sortearNome()
     Console.Clear();
     if (nomes.Count != 0)
     {
-        Console.WriteLine("Opção selecionada: Sortear Nomes \n");
-        int i = random.Next(0, nomes.Count);
-        Console.WriteLine("Nome sorteado: " + nomes[i]);
-        Console.ReadLine();
+        bool sorteioRodando = false;
+        while (!sorteioRodando)
+        {
+            Console.WriteLine("Opção selecionada: Sortear Nomes \n");
+            int i = random.Next(0, nomes.Count);
+            Console.WriteLine("Nome sorteado: " + nomes[i] + "\n");
+
+            Console.WriteLine("Deseja sortear outro nome? (S/N):");
+            string? simOuNao = Console.ReadLine();
+
+            if (simOuNao != null && simOuNao.Length == 1 && simOuNao.ToLower() == "s")
+            {
+                Console.Clear();
+            }
+            else
+            {
+                sorteioRodando = true;
+                Console.Clear();
+                Console.WriteLine("Voltando ao Inicio..");
+                Thread.Sleep(1000);
+            }
+        }
     }
     else
     {
