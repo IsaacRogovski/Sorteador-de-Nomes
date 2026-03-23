@@ -7,8 +7,8 @@ Random random = new Random();
 while (rodando)
 {
     Console.Clear();
-    Console.WriteLine("\n=====Sorteio de Nomes=====");
-    Console.WriteLine("\n\n--Opções--\n");
+    Console.WriteLine("=====Sorteio de Nomes=====");
+    Console.WriteLine("\n--Opções--\n");
     Console.WriteLine("1 - Cadastrar Nome");
     Console.WriteLine("2 - Listar Nomes");
     Console.WriteLine("3 - Sortear Nomes");
@@ -104,6 +104,7 @@ void sortearNome()
         bool sorteioRodando = false;
         while (!sorteioRodando)
         {
+            Console.Clear();
             Console.WriteLine("Opção selecionada: Sortear Nomes \n");
             int i = random.Next(0, nomes.Count);
             Console.WriteLine("Nome sorteado: " + nomes[i] + "\n");
@@ -113,7 +114,22 @@ void sortearNome()
 
             if (simOuNao != null && simOuNao.Length == 1 && simOuNao.ToLower() == "s")
             {
-                Console.Clear();
+
+                Console.WriteLine("Deseja retirar o nome sorteado? (S/N):");
+                simOuNao = Console.ReadLine();
+
+                if (simOuNao != null && simOuNao.Length == 1 && simOuNao.ToLower() == "s")
+                {
+                    if (nomes.Count <= 2)
+                    {
+                        Console.WriteLine("A quantidade de nomes adicionados é o limite para o funcionamento do sorteio.");
+                        Thread.Sleep(1000);
+                    }
+                    else
+                    {
+                        nomes.RemoveAt(i);
+                    }
+                }
             }
             else
             {
