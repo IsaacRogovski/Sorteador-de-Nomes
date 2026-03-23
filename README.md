@@ -1,6 +1,5 @@
 ## Sorteador de Nomes
 
----
 
 ![Sorteador de Nomes](./Sorteio%20de%20Nomes.png)
 
@@ -9,14 +8,12 @@
 Este projeto consiste em um **sorteador de nomes desenvolvido em C#**, utilizando a plataforma .NET.  
 A aplicação permite selecionar aleatoriamente um nome a partir de uma lista previamente definida.
 
----
 
 ## Objetivo
 
 O principal objetivo deste projeto foi o **aprendizado da linguagem C#**
 
 
----
 
 ## Como Executar o Projeto
 
