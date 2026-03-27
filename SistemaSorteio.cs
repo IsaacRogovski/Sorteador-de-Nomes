@@ -1,6 +1,6 @@
 // using System.Text.Json;
 
-public class SistemaSorteio 
+public class SistemaSorteio
 {
     public List<string> nomes = new List<string>(); //cria o objeto de uma lista (quase um array)
     public Random random = new Random(); //cria o objeto pra manipulação de numeros aleatórios
@@ -9,17 +9,16 @@ public class SistemaSorteio
     {
         bool isNomeInserido = false; //Define o valor falso, que indica que ainda nao foram inseridos todos os nomes
         while (!isNomeInserido) //só vai parar caso o valor seja verdadeiro
-        { 
+        {
             Console.Clear();
-            Console.WriteLine("Opção selecionada: Cadastrar nome");
-            Console.WriteLine("Digite o nome a ser cadastrado:");
+            Console.WriteLine("=====CADASTRO=====\n");
+            Console.Write("Digite o nome a ser cadastrado: ");
             string? nome = Console.ReadLine(); //detalhe interessante, o string? permite que o valor seja null
             if (!string.IsNullOrWhiteSpace(nome)) //metodo bem autoexplicativo, e o if para validar apenas se nao for null ou ""
             {
-                Console.Clear();
                 nomes.Add(nome); //adiciona o nome inserido à lista nomes
-                Console.WriteLine($"{nome} foi adicionado ao sistema");
-                Console.WriteLine("Deseja cadastrar outro nome? (S/N):");
+                Console.WriteLine($"\nO nome: '{nome}' foi cadastrado com sucesso.");
+                Console.Write("Deseja cadastrar outro nome? (S/N): ");
                 string? simOuNao = Console.ReadLine();
 
                 if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer inserir mais um nome
@@ -46,14 +45,14 @@ public class SistemaSorteio
     public void listarNomes()
     {
         Console.Clear();
-        Console.WriteLine("Opção selecionada: Listar nomes inseridos: \n");
+        Console.WriteLine("Lista de nomes inseridos: \n");
         int i = 1;
         foreach (string nome in nomes) //foreach que lista todos os valores da lista nomes
         {
             Console.WriteLine($"{i} - {nome}");
             i++;
         }
-        Console.WriteLine("\nPressione qualquer tecla para retornar ao Inicio:");
+        Console.Write("\nPressione qualquer tecla para retornar ao Inicio: ");
         Console.ReadKey();
     }
 
@@ -66,16 +65,24 @@ public class SistemaSorteio
             while (!sorteioRodando) //enquanto for false vai estar rodando
             {
                 Console.Clear();
-                Console.WriteLine("Opção selecionada: Sortear Nomes \n");
-                int i = random.Next(0, nomes.Count); // i vai ser um numero aleatorio de 0 ate o length da lista nomes
-                Console.WriteLine($"Nome sorteado: {nomes[i]}\n");
-                Console.WriteLine("Deseja sortear outro nome? (S/N):");
+                Console.WriteLine("=====SORTEIO=====\n");
+                int indiceSorteado = random.Next(0, nomes.Count); // indiceSorteado vai ser um numero aleatorio de 0 ate o length da lista nomes
+                int ianimacao = random.Next(0, nomes.Count); // ianimacao é um numero aleatório utilizado apenas para a primeira parte da animação
+                Console.Write($"\rSorteando: {nomes[ianimacao]}   "); //esta linha é mostrada para ser a primeira linha da animação
+                for (int ind = 0; ind < 30; ind++) // for para criar a animação
+                {
+                    Thread.Sleep(100);
+                    int i2 = random.Next(0, nomes.Count);
+                    Console.Write($"\rSorteando: {nomes[i2]}   ");
+                }
+                Console.WriteLine($"\rNome sorteado: {nomes[indiceSorteado]}\n"); //mostra o nome sorteado
+                Console.Write("Deseja sortear outro nome? (S/N): ");
                 string? simOuNao = Console.ReadLine();
 
                 if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer sortear outro nome
                 {
 
-                    Console.WriteLine("Deseja retirar o nome sorteado? (S/N):");
+                    Console.Write("Deseja retirar o nome sorteado? (S/N): ");
                     simOuNao = Console.ReadLine();
 
                     if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer tirar o nome que acabou de ser sorteado
@@ -85,12 +92,12 @@ public class SistemaSorteio
                             Console.WriteLine("A quantidade de nomes adicionados é o limite para o funcionamento do sorteio.");
                             Thread.Sleep(1000);
                         }
-                        else 
+                        else
                         {
-                            nomes.RemoveAt(i); // tira o nome que foi sorteado
+                            nomes.RemoveAt(indiceSorteado); // tira o nome que foi sorteado
                         }
                     }
-                } 
+                }
                 else //else que diz que ele não quer sortear outro nome
                 {
                     sorteioRodando = true; // deixa true para sair do loop, e voltar ao inicio

@@ -11,15 +11,15 @@ while (rodando) //diz que enquanto o sistema estiver rodando continua executando
     Console.WriteLine("2 - Listar Nomes");
     Console.WriteLine("3 - Sortear Nomes");
     Console.WriteLine("0 - Sair\n");
-    Console.WriteLine("Insira a opção que deseja:");
+    Console.Write("Insira a opção que deseja: ");
 
     if (!int.TryParse(Console.ReadLine(), out int opcao)) // ve se o valor inserido é um inteiro
     {
         Console.Clear();
         Console.WriteLine("Insira um valor valido!\n\n");
-        Thread.Sleep(1000);
+
     }
-    else 
+    else
     {
         switch (opcao) //switch que instancia os metodos do objeto sistema a partir do valor inserido
         {
@@ -38,6 +38,7 @@ while (rodando) //diz que enquanto o sistema estiver rodando continua executando
                 break;
             default:
                 Console.WriteLine("Opção inválida. Por favor, selecione uma opção válida.");
+                Thread.Sleep(1000);
                 break;
         }
     }
