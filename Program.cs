@@ -17,7 +17,6 @@ while (rodando) //diz que enquanto o sistema estiver rodando continua executando
     {
         Console.Clear();
         Console.WriteLine("Insira um valor valido!\n\n");
-
     }
     else
     {

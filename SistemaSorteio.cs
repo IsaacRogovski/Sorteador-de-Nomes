@@ -67,14 +67,15 @@ public class SistemaSorteio
                 Console.Clear();
                 Console.WriteLine("=====SORTEIO=====\n");
                 int indiceSorteado = random.Next(0, nomes.Count); // indiceSorteado vai ser um numero aleatorio de 0 ate o length da lista nomes
-                int ianimacao = random.Next(0, nomes.Count); // ianimacao é um numero aleatório utilizado apenas para a primeira parte da animação
-                Console.Write($"\rSorteando: {nomes[ianimacao]}   "); //esta linha é mostrada para ser a primeira linha da animação
-                for (int ind = 0; ind < 30; ind++) // for para criar a animação
+                int ind = 0;
+                do
                 {
-                    Thread.Sleep(100);
                     int i2 = random.Next(0, nomes.Count);
-                    Console.Write($"\rSorteando: {nomes[i2]}   ");
-                }
+                    Console.Write($"\rSorteando: {nomes[i2]}     ");
+                    Thread.Sleep(100);
+                    ind++;
+                } while (ind < 30);
+
                 Console.WriteLine($"\rNome sorteado: {nomes[indiceSorteado]}\n"); //mostra o nome sorteado
                 Console.Write("Deseja sortear outro nome? (S/N): ");
                 string? simOuNao = Console.ReadLine();

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/PrimeiroProjetoCsharp.csproj": {}
+    "/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/PrimeiroProjetoCsharp.csproj": {}
   },
   "projects": {
-    "/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/PrimeiroProjetoCsharp.csproj": {
+    "/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/PrimeiroProjetoCsharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/PrimeiroProjetoCsharp.csproj",
+        "projectUniqueName": "/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/PrimeiroProjetoCsharp.csproj",
         "projectName": "PrimeiroProjetoCsharp",
-        "projectPath": "/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/PrimeiroProjetoCsharp.csproj",
-        "packagesPath": "/home/isaac-rogovski/.nuget/packages/",
-        "outputPath": "/home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/",
+        "projectPath": "/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/PrimeiroProjetoCsharp.csproj",
+        "packagesPath": "/home/isaacrogovski/.nuget/packages/",
+        "outputPath": "/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/isaac-rogovski/.nuget/NuGet/NuGet.Config"
+          "/home/isaacrogovski/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

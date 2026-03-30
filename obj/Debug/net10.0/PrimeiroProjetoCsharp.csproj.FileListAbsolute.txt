@@ -13,3 +13,18 @@
 /home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.genruntimeconfig.cache
 /home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/ref/PrimeiroProjetoCsharp.dll
 /home/isaac-rogovski/dotNetProjects/PrimeiroProjetoCsharp/obj/Debug/net10.0/PrimeiroProjetoCsharp.sourcelink.json
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/bin/Debug/net10.0/PrimeiroProjetoCsharp
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/bin/Debug/net10.0/PrimeiroProjetoCsharp.deps.json
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/bin/Debug/net10.0/PrimeiroProjetoCsharp.runtimeconfig.json
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/bin/Debug/net10.0/PrimeiroProjetoCsharp.dll
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/bin/Debug/net10.0/PrimeiroProjetoCsharp.pdb
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.AssemblyInfoInputs.cache
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.AssemblyInfo.cs
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.csproj.CoreCompileInputs.cache
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.sourcelink.json
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.dll
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/refint/PrimeiroProjetoCsharp.dll
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.pdb
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/PrimeiroProjetoCsharp.genruntimeconfig.cache
+/home/isaacrogovski/Área de trabalho/Sorteador-de-Nomes/obj/Debug/net10.0/ref/PrimeiroProjetoCsharp.dll
