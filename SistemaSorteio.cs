@@ -1,124 +1,127 @@
-// using System.Text.Json;
+using System;
 
-public class SistemaSorteio
+namespace sistemaDeSorteio
 {
-    public List<string> nomes = new List<string>(); //cria o objeto de uma lista (quase um array)
-    public Random random = new Random(); //cria o objeto pra manipulação de numeros aleatórios
-
-    public void cadastrarNome()
+    public class SistemaSorteio
     {
-        bool isNomeInserido = false; //Define o valor falso, que indica que ainda nao foram inseridos todos os nomes
-        while (!isNomeInserido) //só vai parar caso o valor seja verdadeiro
-        {
-            Console.Clear();
-            Console.WriteLine("=====CADASTRO=====\n");
-            Console.Write("Digite o nome a ser cadastrado: ");
-            string? nome = Console.ReadLine(); //detalhe interessante, o string? permite que o valor seja null
-            if (!string.IsNullOrWhiteSpace(nome)) //metodo bem autoexplicativo, e o if para validar apenas se nao for null ou ""
-            {
-                nomes.Add(nome); //adiciona o nome inserido à lista nomes
-                Console.WriteLine($"\nO nome: '{nome}' foi cadastrado com sucesso.");
-                Console.Write("Deseja cadastrar outro nome? (S/N): ");
-                string? simOuNao = Console.ReadLine();
+        public List<string> nomes = new List<string>(); //cria o objeto de uma lista (quase um array)
+        public Random random = new Random(); //cria o objeto pra manipulação de numeros aleatórios
 
-                if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer inserir mais um nome
-                {
-                    Console.Clear();
-                }
-                else
-                {
-                    isNomeInserido = true; //deixa true e finaliza o loop, fazendo voltar ao inicio
-                    Console.Clear();
-                    Console.WriteLine("Voltando ao Inicio..");
-                    Thread.Sleep(1000);
-                }
-            }
-            else //else para dizer que o valor do nome inserido é null ou ""
+        public void cadastrarNome()
+        {
+            bool isNomeInserido = false; //Define o valor falso, que indica que ainda nao foram inseridos todos os nomes
+            while (!isNomeInserido) //só vai parar caso o valor seja verdadeiro
             {
                 Console.Clear();
-                Console.WriteLine("Insira um valor valido!");
-                Thread.Sleep(1000);
-            }
-        }
-    }
-
-    public void listarNomes()
-    {
-        Console.Clear();
-        Console.WriteLine("Lista de nomes inseridos: \n");
-        int i = 1;
-        foreach (string nome in nomes) //foreach que lista todos os valores da lista nomes
-        {
-            Console.WriteLine($"{i} - {nome}");
-            i++;
-        }
-        Console.Write("\nPressione qualquer tecla para retornar ao Inicio: ");
-        Console.ReadKey();
-    }
-
-    public void sortearNome()
-    {
-        Console.Clear();
-        if (nomes.Count > 1) //verifica se tem ao menos 2 valor na lista
-        {
-            bool sorteioRodando = false; //Define o valor falso, que indica que o sorteio ainda esta rodando
-            while (!sorteioRodando) //enquanto for false vai estar rodando
-            {
-                Console.Clear();
-                Console.WriteLine("=====SORTEIO=====\n");
-                int indiceSorteado = random.Next(0, nomes.Count); // indiceSorteado vai ser um numero aleatorio de 0 ate o length da lista nomes
-                int ind = 0;
-                do
+                Console.WriteLine("=====CADASTRO=====\n");
+                Console.Write("Digite o nome a ser cadastrado: ");
+                string? nome = Console.ReadLine(); //detalhe interessante, o string? permite que o valor seja null
+                if (!string.IsNullOrWhiteSpace(nome)) //metodo bem autoexplicativo, e o if para validar apenas se nao for null ou ""
                 {
-                    int i2 = random.Next(0, nomes.Count);
-                    Console.Write($"\rSorteando: {nomes[i2]}     ");
-                    Thread.Sleep(100);
-                    ind++;
-                } while (ind < 30);
+                    nomes.Add(nome); //adiciona o nome inserido à lista nomes
+                    Console.WriteLine($"\nO nome: '{nome}' foi cadastrado com sucesso.");
+                    Console.Write("Deseja cadastrar outro nome? (S/N): ");
+                    string? simOuNao = Console.ReadLine();
 
-                Console.WriteLine($"\rNome sorteado: {nomes[indiceSorteado]}\n"); //mostra o nome sorteado
-                Console.Write("Deseja sortear outro nome? (S/N): ");
-                string? simOuNao = Console.ReadLine();
-
-                if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer sortear outro nome
-                {
-
-                    Console.Write("Deseja retirar o nome sorteado? (S/N): ");
-                    simOuNao = Console.ReadLine();
-
-                    if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer tirar o nome que acabou de ser sorteado
+                    if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer inserir mais um nome
                     {
-                        if (nomes.Count <= 2) // se neste momento, a lista tiver 2 ou menos valores nao deixa remover o ultimo sorteado
-                        {
-                            Console.WriteLine("A quantidade de nomes adicionados é o limite para o funcionamento do sorteio.");
-                            Thread.Sleep(1000);
-                        }
-                        else
-                        {
-                            nomes.RemoveAt(indiceSorteado); // tira o nome que foi sorteado
-                        }
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        isNomeInserido = true; //deixa true e finaliza o loop, fazendo voltar ao inicio
+                        Console.Clear();
+                        Console.WriteLine("Voltando ao Inicio..");
+                        Thread.Sleep(1000);
                     }
                 }
-                else //else que diz que ele não quer sortear outro nome
+                else //else para dizer que o valor do nome inserido é null ou ""
                 {
-                    sorteioRodando = true; // deixa true para sair do loop, e voltar ao inicio
                     Console.Clear();
-                    Console.WriteLine("Voltando ao Inicio..");
+                    Console.WriteLine("Insira um valor valido!");
                     Thread.Sleep(1000);
                 }
             }
         }
-        else // se quando ele tentar sortear tiver menos de 2 nomes, nao deixa
+
+        public void listarNomes()
         {
-            Console.WriteLine("Insira ao menos 2 nomes antes de sortear!");
-            Thread.Sleep(1500);
+            Console.Clear();
+            Console.WriteLine("Lista de nomes inseridos: \n");
+            int i = 1;
+            foreach (string nome in nomes) //foreach que lista todos os valores da lista nomes
+            {
+                Console.WriteLine($"{i} - {nome}");
+                i++;
+            }
+            Console.Write("\nPressione qualquer tecla para retornar ao Inicio: ");
+            Console.ReadKey();
         }
-    }
 
-    public void sair()
-    {
-        Console.Clear();
-        Console.WriteLine("\nSAINDO\n");
-    }
+        public void sortearNome()
+        {
+            Console.Clear();
+            if (nomes.Count > 1) //verifica se tem ao menos 2 valor na lista
+            {
+                bool sorteioRodando = false; //Define o valor falso, que indica que o sorteio ainda esta rodando
+                while (!sorteioRodando) //enquanto for false vai estar rodando
+                {
+                    Console.Clear();
+                    Console.WriteLine("=====SORTEIO=====\n");
+                    int indiceSorteado = random.Next(0, nomes.Count); // indiceSorteado vai ser um numero aleatorio de 0 ate o length da lista nomes
+                    int ind = 0;
+                    do
+                    {
+                        int i2 = random.Next(0, nomes.Count);
+                        Console.Write($"\rSorteando: {nomes[i2]}     ");
+                        Thread.Sleep(100);
+                        ind++;
+                    } while (ind < 30);
 
+                    Console.WriteLine($"\rNome sorteado: {nomes[indiceSorteado]}\n"); //mostra o nome sorteado
+                    Console.Write("Deseja sortear outro nome? (S/N): ");
+                    string? simOuNao = Console.ReadLine();
+
+                    if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer sortear outro nome
+                    {
+
+                        Console.Write("Deseja retirar o nome sorteado? (S/N): ");
+                        simOuNao = Console.ReadLine();
+
+                        if (simOuNao?.ToLower() == "s") //se sim, quer dizer que ele quer tirar o nome que acabou de ser sorteado
+                        {
+                            if (nomes.Count <= 2) // se neste momento, a lista tiver 2 ou menos valores nao deixa remover o ultimo sorteado
+                            {
+                                Console.WriteLine("A quantidade de nomes adicionados é o limite para o funcionamento do sorteio.");
+                                Thread.Sleep(1000);
+                            }
+                            else
+                            {
+                                nomes.RemoveAt(indiceSorteado); // tira o nome que foi sorteado
+                            }
+                        }
+                    }
+                    else //else que diz que ele não quer sortear outro nome
+                    {
+                        sorteioRodando = true; // deixa true para sair do loop, e voltar ao inicio
+                        Console.Clear();
+                        Console.WriteLine("Voltando ao Inicio..");
+                        Thread.Sleep(1000);
+                    }
+                }
+            }
+            else // se quando ele tentar sortear tiver menos de 2 nomes, nao deixa
+            {
+                Console.WriteLine("Insira ao menos 2 nomes antes de sortear!");
+                Thread.Sleep(1500);
+            }
+        }
+
+        public void sair()
+        {
+            Console.Clear();
+            Console.WriteLine("\nSAINDO\n");
+        }
+
+    }
 }
